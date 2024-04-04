@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('index', [App\Http\Controllers\SociosController::class, 'index'])->name('index');
+Route::get('create', [App\Http\Controllers\SociosController::class, 'create'])->name('create');
+Route::post('save', [App\Http\Controllers\SociosController::class, 'save'])->name('save');
+Route::post('delete', [App\Http\Controllers\SociosController::class, 'delete'])->name('delete');
